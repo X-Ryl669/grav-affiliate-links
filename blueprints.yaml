@@ -1,0 +1,56 @@
+name: Affiliate Links
+slug: affiliate-links
+type: plugin
+version: 1.0.0
+description: Automatically add affiliate links to your pages
+icon: code
+author:
+  name: X-Ryl669
+  email: boite.pour.spam@gmail.com
+  url: https://blog.cyril.by
+homepage: https://github.com/X-Ryl669/grav-affiliate-links
+keywords: affiliate links, amazon, ebay, aliexpress, banggood
+bugs: https://github.com/X-Ryl669/grav-affiliate-links/issues
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7.0' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    output-heading:
+      type: section
+      title: Affiliate program
+      text: '<em>Enable any or all of the following provider for affiliation links.</em>'
+      underline: true
+    output-amazon:
+      type: toggle
+      label: Amazon
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    output-aliexpress:
+      type: toggle
+      label: AliExpress
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool

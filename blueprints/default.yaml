@@ -1,0 +1,50 @@
+title: Affiliate Links
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+
+        options:
+          type: tab
+          title: PLUGIN_ADMIN.OPTIONS
+
+          fields:
+            publishing:
+              type: section
+              title: PLUGIN_ADMIN.PUBLISHING
+              underline: true
+
+              fields:
+                header.affiliation:
+                  unset@: true
+
+        affiliate-links:
+          type: tab
+          title: Affiliate Links
+
+          fields:
+
+            header.affiliate-links.enabled:
+              type: select
+              label: Enabled
+              size: medium
+              options:
+                website: Website (default)
+                enabled: Enabled for this article
+                disabled: Disabled for this article
+              validate:
+                required: true
+
+            header.affiliate-links.affiliation:
+              toggleable: true
+              type: array
+              label: Affiliate links
+              placeholder_key: PLUGIN_ADMIN.METADATA_KEY
+              placeholder_value: PLUGIN_ADMIN.METADATA_VALUE
