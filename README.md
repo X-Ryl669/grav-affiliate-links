@@ -2,6 +2,9 @@
 
 The **Affiliate Link** Plugin for [Grav CMS](https://github.com/getgrav/grav) adds affiliation links to your pages
 
+## Demo
+
+For example, it's being used on the bottom of [this post on my blog](https://blog.cyril.by/en/3d-printers/twotrees-sapphireplus-3d-printer-review).
 
 ## Features
 
