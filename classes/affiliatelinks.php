@@ -34,8 +34,9 @@ class AffiliateLinks
 
         $affiliateLinks = (array)($page->header()->$alnks);
         $this->affiliateLinks = $affiliateLinks;
-        $this->enabled = $affiliateLinks['enabled'];
+        $this->enabled = $affiliateLinks['enabled'] && isset($affiliateLinks['affiliation']);
 
+        if (!$this->enabled) return;
         foreach ($affiliateLinks['affiliation'] as $links) {
             switch($links['link_type']) {
             case "amazon":      $this->parseAmazon($links['link_url'], $links['link_desc']); break;
