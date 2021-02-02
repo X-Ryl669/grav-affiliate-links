@@ -27,6 +27,13 @@ There is an additional configuration tab titled `Affiliate Link` available on ea
 
 Currently, only Amazon and AliExpress provider are supported, patch welcome for other providers.
 
+## Installation in your theme
+In your theme's twig, you'll need to had the following code where you want the affiliate links to appear:
+```
+{% if config.plugins['affiliate-links'].enabled and page.header().affiliation|length %}
+  {% include 'partials/affiliate-links.html.twig' %}
+{% endif %}
+``` 
 
 ## Credits
 

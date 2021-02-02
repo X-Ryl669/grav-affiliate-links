@@ -43,8 +43,31 @@ form:
                 required: true
 
             header.affiliate-links.affiliation:
-              toggleable: true
-              type: array
-              label: Affiliate links
-              placeholder_key: PLUGIN_ADMIN.METADATA_KEY
-              placeholder_value: PLUGIN_ADMIN.METADATA_VALUE
+              name: affiliation
+              type: list
+              style: vertical
+              label: Links
+
+              fields:
+
+                .link_type: 
+                   type: select
+                   label: 'Affiliation provider'
+                   size: short
+                   help: 'Copy the image URL link here, not text only nor text+image link'
+                   data-options@: '\Grav\Plugin\AffiliateLinksPlugin::allowedProviders' 
+                .link_help:
+                   type: display
+                   size: large
+                   label: Instructions
+                   markdown: true
+                   content: "Copy the image link URL here. **Do not** copy the text only URL or image+text URL..."
+                .link_url:
+                   type: text
+                   label: 'Image link URL'
+                .link_desc:
+                   type: text
+                   help: "Alternative description (replacing link's decription if not empty)"
+                   label: 'Opt. description'
+
+

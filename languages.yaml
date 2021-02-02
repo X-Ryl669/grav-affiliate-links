@@ -1,0 +1,14 @@
+# French
+fr:
+  PLUGINS:
+    AFFILIATE_LINKS:
+      TITLE: "Liens sponsorisés"
+      DESCRIPTION: "Afin de m'aider à financer l'infrastructure de ce blog, je liste à la fin des billets les liens affiliés sur le matériel évoqué ci-dessus."
+
+# English
+en:
+  PLUGINS:
+    AFFILIATE_LINKS:
+      TITLE: "Sponsored links"
+      DESCRIPTION: "In order to pay for infrastructure cost for this blog, I'm listing some affiliated links about the hardware listed above."
+

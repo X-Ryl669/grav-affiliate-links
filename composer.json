@@ -1,5 +1,5 @@
 {
-  "name": "X-Ryl669/grav-affiliate-links",
+  "name": "x-ryl669/grav-affiliate-links",
   "type": "grav-plugin",
   "description": "Automatically add affiliate links to your pages.",
   "keywords": ["aliexpress", "banggood", "ebay", "amazon", "affiliate links"],
@@ -15,7 +15,7 @@
   ],
   "support": {
     "issues": "https://github.com/X-Ryl669/grav-affiliate-links/issues",
-    "docs": "https://github.com/X-Ryl669/grav-affiliate-link/blob/master/README.md"
+    "docs": "https://github.com/X-Ryl669/grav-affiliate-links/blob/master/README.md"
   },
   "require": {
     "php": ">=7.1.3",
