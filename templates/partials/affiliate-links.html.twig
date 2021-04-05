@@ -1,0 +1,16 @@
+{% if true %} {# plugins.affiliate-links.enabled #}
+<h2>{{ 'PLUGINS.AFFILIATE_LINKS.TITLE'|t }}</h2>
+<p>{{ 'PLUGINS.AFFILIATE_LINKS.DESCRIPTION'|t }}</p>
+<ul class='affiliate'>
+
+{% for link in page.header().affiliation %}
+<li>
+  <a class='external-link image' target='_blank' href='{{link.url}}' rel='nofollow noopener noreferrer'>
+    <span>{{link.provider}}</span>
+    <img src='{{link.img}}' alt='{{link.provider}} {{link.desc}}' border='0'>
+    <span>{{link.desc}}</span>
+  </a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
